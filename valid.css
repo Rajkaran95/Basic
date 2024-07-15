@@ -1,0 +1,26 @@
+body{background: #454545;
+}
+
+        #fr1{
+            background-color: rgb(216, 216, 235);
+            width: 75%;
+            height: 100px;
+        }
+        #fr2{
+            background-color: rgb(206, 216, 206);
+            width: 75%;
+            height: 500px;
+            background-image:url("sherry-christian-8Myh76_3M2U-unsplash.jpg");
+        }
+
+        #ta1{
+            background-color: aqua;
+           width: 100%;
+           height: 100%;
+        }
+        #ro1{
+            width: 25%;
+            float: none;
+        }
+      
+  

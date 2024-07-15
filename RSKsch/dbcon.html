@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const express = require('express');
+const mysql = require('mysql');
+
+const app = express();
+
+
+const pool = mysql.createPool({
+  connectionLimit: 10,
+  host: 'localhost',
+  user: 'root',
+  password: 'root',
+  database: 'studentdtl1'
+});
+
+
+app.get('/html-content', (req, res) => {
+ 
+  pool.query('SELECT content FROM studtl1', (err, results) => {
+    if (err) {
+      console.error('Error querying database:', err);
+      res.status(500).send('Error retrieving HTML content from database');
+      return;
+    }
+    
+    if (results.length === 0) {
+      res.status(404).send('HTML content not found');
+      return;
+    }
+
+    
+    res.send(results[0].content);
+  });
+});
+
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+button{
+
+    marginLeft:'350px',marginTop:'-1070px',width:'100px'
+    }
+    div{
+     marginTop:'80px',marginLeft:'120px'
+    }
+    card-body{
+    
+    padding: "0 50px", margin: "0" 
+    }
+    h4{
+    fontSize:'24px',marginTop:'15px'
+    }
+    row{
+     
+        borderBottom: "1px solidlightgray",
+       marginTop: "-5px",
+                             
+    }
+    col-sm-3{
+     marginBottom: "10px" 
+    }
+    image-container{
+      width: "100px", height: "100px" 
+    
+    }
+    imgprofile{
+     
+                                      Width: "20px",
+                                      height:'20px',
+                                      height: "auto",
+                                      borderRadius: "50%",
+                                      border: "none",
+                                   
+    
+    }
+    
+    userData ml-3{
+    borderRight: "1px solid #d3d3d361" 
+    }
+    btn btn-outline-primary{
+     marginTop:'10px', color:'#0089FF', marginLeft:'-20px', fontSize:'10px'
+    }
+    btn profile_remove_btn1{
+    marginLeft:'-20px', marginBottom:'10px',color:' #001D6C', fontSize:'15px'
+    
+    }
+    lable{
+    marginBottom:'-90px'}
+    btn btn-outline-primary{
+      display: "none" 
+    }
+    row{
+     marginTop: "2%" 
+    }
+    radio control-label{
+    
+                                    display: "inherit",
+                                    marginBottom: "3%",
+                                    marginTop: "3%",
+                               
+    }
+    radio control-label{
+    
+                                    display: "inherit",
+                                    marginBottom: "5%",
+                                    marginTop: "5%",
+    
+    }
+    radio control-label{
+    
+                                    display: "inherit",
+                                    marginBottom: "5%",
+                                    marginTop: "5%",
+                             
+    }
+    radio control-label{
+    
+                                    display: "inherit",
+                                    marginBottom: "3%",
+                                    marginTop: "-4%",
+                                
+    }
+    check-icon{
+     fontSize: "23px", color: "blue" 
+    
+    }
+    upload-icon-label{
+    alignItems: "end", paddingLeft: "90" 
+    }
+    upload-txt{
+     marginLeft:"-20px"
+    }
+    radio control-label{
+     
+                                    display: "inherit",
+                                    marginBottom: "3%",
+                                    marginTop: "-4%",
+                            
+    }
+    check-icon{
+    style={{ fontSize: "23px", color: "blue" }}
+    }
+    mobile control-label{
+                                  
+                                    display: "inherit",
+                                    marginBottom: "3%",
+                                    marginTop: "3%",
+                                  
+    }
+    radio control-label{
+    
+                                    display: "inherit",
+                                    marginBottom: "3%",
+                                    marginTop: "3%",
+                                  
+    }
+    col-sm-12{
+    
+    marginLeft:'390px',width:'150px'
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

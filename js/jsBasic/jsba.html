@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsbasic</title>
+</head>
+<body>
+    
+<input id="t1" type="number" max="300" min="100" required>
+<button onclick="getMassage()">OK</button>
+
+<p>Invalid</p>
+<p id="t2"></p>
+<script>
+    function vaidatio(){
+        console.log("not valid");
+    }
+
+function getMassage(){
+    const inoj = document.getElementById("t1");
+    if(!inoj.checkVisibility){
+        let myDiv = document.getElementById("t2").innerHTML=inoj.vaidatio;
+    }
+    let myDiv = document.getElementById("t2").innerHTML="input ok";
+
+}
+</script>
+</body>
+</html>

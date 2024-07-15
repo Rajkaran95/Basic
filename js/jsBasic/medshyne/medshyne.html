@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" col<ntent="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="stylesheet" href="medshyne.css">
+</head>
+<body>
+    return (
+        <div >
+     <button
+            type="button"
+            
+            className="btn btn-outline-primary"
+            onClick={handleBackButtonClick}
+          
+          >Back
+          </button>
+        <div className="container"  >
+          
+          <div className="row">
+            <div className="col-lg-8 col-md-12 col-sm-12 m-auto">
+              <div className="row">
+                <form>
+                  <div className="card main_card-1">
+                    <div
+                      className="card-body"
+                    
+                    >
+                      <h4 >Staff details</h4>
+                      <div className="col-sm-12">
+                        <div
+                          className="row"  
+                        >
+                          <div
+                            className="col-sm-3"
+                          >
+                            <div
+                              className="image-container"
+                            >
+                              <img 
+                                src={profilePicture || "./asset/profile.jpg"}
+                                alt="Profile"
+                                id="imgProfile"
+                               
+                                className="img-thumbnail img-responsive"
+                              />
+                              <div className="middle"></div>
+                            </div>
+                          </div>
+                          <div className="col-sm-3">
+                            <div
+                              className="userData ml-3"
+                              
+                            >
+                              <label
+                                htmlFor="profilePicture"
+                                className="btn btn-outline-primary"
+                              >
+                                Upload Photo
+                              </label>
+                              <input
+                                type="file"
+                                accept=".png, .jpg, .jpeg"
+                               
+                                className="btn btn-outline-primary"
+                                id="profilePicture"
+                                name="file"
+                                onChange={handleProfilePictureChange}
+                              />
+                              <button 
+                                type="button"
+                                className="btn profile_remove_btn1"
+                                onClick={handleRemoveProfilePicture}
+                              >
+                                Remove
+                              </button>
+                            </div>
+                          </div>
+                          <div className="col-sm-3 form-group" >
+                
+                            <label  >Name*</label>
+                            <input
+                              type="text"
+                              placeholder="Name"
+                              className="form-control"
+                              value={name}
+                              onChange={(e) => setName(e.target.value)}
+                            />
+                          </div>
+                          <div className="col-sm-3 form-group">
+                            <label >ID Number*</label>
+                            <input
+                              type="text"
+                              placeholder="ID Number"
+                              className="form-control"
+                              value={idNumber}
+                              onChange={handleInputChange}
+                              onBlur={handleBlur}
+                              title="Please enter a Valid-ID"
+                              pattern="[0-9]{10}"
+                              required
+                            />
+                          </div>
+                        </div>
+    
+    
+                        <div className="row">
+                          <div className=" col-md-6 mt-5 form-group">
+                            <label>New Password</label>
+                            <div className="position-relative">
+                              <input
+                                type="Text"
+                                placeholder="New password"
+                                className="form-control "
+                                //value={}
+                               // onChange={(e) => setDob(e.target.value)}
+                              />
+                            </div>
+                          </div>
+                          <div className="col-sm-6 mt-5 col-md-6 form-group">
+                            <label>Current Password</label>
+                            <input
+                              type="text"
+                              placeholder="Current password"
+                              className="form-control"
+                             // value={bloodGroup}
+                             // onChange={(e) => setBloodGroup(e.target.value)}
+                            />
+                          </div>
+                        </div>
+    
+                        <div className="row" >
+                          <div className="col-sm-8 form-group">
+                            <label>Address</label>
+                            <input
+                              type="text"
+                              placeholder="Address"
+                              className="form-control"
+                              value={address}
+                              onChange={(e) => setAddress(e.target.value)}
+                            />
+                          </div>
+                          <div className="col-sm-4 form-group">
+                            <label
+                              className="radio control-label"
+                            
+                            >
+                              Gender
+                            </label>
+                            <div className="gender">
+                              <select
+                                id="inputState"
+                                className="form-select "
+                                value={selectedGender}
+                                onChange={(e) => setSelectedGender(e.target.value)}
+                              >
+                                <option selected>Choose...</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Transgender</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-sm-3 form-group">
+                            <label>State</label>
+                            <input
+                              type="text"
+                              placeholder="State"
+                              className="form-control"
+                              value={state1}
+                              onChange={(e) => setState(e.target.value)}
+                            />
+                          </div>
+                          <div className="col-sm-3 form-group">
+                            <label>Pincode</label>
+                            <input
+                              type="text"
+                              placeholder="Pincode"
+                              className="form-control"
+                              value={pinNumber}
+                              onChange={handlePinInputChange}
+                              onBlur={handlePinBlur}
+                              title="Please enter a 6-digit numeric pincode"
+                              pattern="[0-9]{6}"
+                              required
+                            />
+                          </div>
+                          <div className="col-sm-3 form-group">
+                            <label>Class</label>
+                            <input
+                              type="text"
+                              placeholder="Class"
+                              className="form-control"
+                              value={className}
+                              onChange={(e) => setClassName(e.target.value)}
+                            />
+                          </div>
+                          <div className="col-sm-3 form-group">
+                            <label>Age</label>
+                            <input
+                              type="text"
+                              placeholder="Age"
+                              className="form-control"
+                              value={age}
+                              onChange={handleAgeInputChange}
+                              onBlur={handleAgeBlur}
+                              title="Please enter Valid Age"
+                              pattern="[0-9]{2}"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className=" col-md-6 form-group">
+                            <label>Date Of Birth</label>
+                            <div className="position-relative">
+                              <input
+                                type="date"
+                                className="form-control custom-date-picker"
+                                value={dob}
+                                onChange={(e) => setDob(e.target.value)}
+                              />
+                            </div>
+                          </div>
+                          <div className="col-sm-6 col-md-6 form-group">
+                            <label>Blood Group</label>
+                            <input
+                              type="text"
+                              placeholder="Blood group"
+                              className="form-control"
+                              value={bloodGroup}
+                              onChange={(e) => setBloodGroup(e.target.value)}
+                            />
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-sm-6 col-md-6">
+                            <label htmlFor="inputState" className="form-label">
+                              Department
+                            </label>
+                            <div className="gender">
+                              <select
+                                id="inputState"
+                                className="form-select"
+                                value={selectedDepartment}
+                                onChange={(e) =>
+                                  setSelectedDepartment(e.target.value)
+                                }
+                              >
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div className="col-sm-6 col-md-6">
+                            <label htmlFor="inputState" className="form-label">
+                              Designation
+                            </label>
+                            <div className="gender">
+                              <select
+                                id="inputState"
+                                className="form-select"
+                                value={selectedDesignation}
+                                onChange={(e) =>
+                                  setSelectedDesignation(e.target.value)
+                                }
+                              >
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-sm">
+                            <label
+                              className="radio control-label"
+                              
+                            >
+                              Allergies
+                            </label>
+                            <div className="form-check form-check-inline mt-2">
+                              <input
+                                className="form-check-input visually-hidden"
+                                type="radio"
+                                name="allergiesRadioOptions"
+                                id="allergiesYes"
+                                value="yes"
+                                onChange={() => setAllergies("yes")}
+                                checked={allergies === "yes"}
+                              />
+                              <label
+                                className="form-check-label tick-label white"
+                                htmlFor="allergiesYes"
+                              >
+                                Yes
+                              </label>
+                            </div>
+                            <div className="form-check form-check-inline">
+                              <input
+                                className="form-check-input visually-hidden"
+                                type="radio"
+                                name="allergiesRadioOptions"
+                                id="allergiesNo"
+                                value="no"
+                                onChange={() => setAllergies("no")}
+                                checked={allergies === "no"}
+                              />
+                              <label
+                                className="form-check-label tick-label white"
+                                htmlFor="allergiesNo"
+                              >
+                                No
+                              </label>
+                            </div>
+                          </div>
+    
+                          <div className="col-sm">
+                            <label
+                              className="radio control-label"
+                              
+                            >
+                              Disease
+                            </label>
+                            <div className="form-check form-check-inline mt-2">
+                              <input
+                                className="form-check-input visually-hidden"
+                                type="radio"
+                                name="diseaseRadioOptions"
+                                id="diseaseYes"
+                                value="yes"
+                                onChange={() => setDisease("yes")}
+                                checked={disease === "yes"}
+                              />
+                              <label
+                                className="form-check-label tick-label white"
+                                htmlFor="diseaseYes"
+                              >
+                                Yes
+                              </label>
+                            </div>
+                            <div className="form-check form-check-inline">
+                              <input
+                                className="form-check-input visually-hidden"
+                                type="radio"
+                                name="diseaseRadioOptions"
+                                id="diseaseNo"
+                                value="no"
+                                onChange={() => setDisease("no")}
+                                checked={disease === "no"}
+                              />
+                              <label
+                                className="form-check-label tick-label white"
+                                htmlFor="diseaseNo"
+                              >
+                                No
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-sm-6 col-md-6 form-group">
+                            <label>Define</label>
+                            <textarea
+                              type="text"
+                              placeholder="Type your message..."
+                              className="form-control"
+                              value={define1}
+                              onChange={(e) => setDefine1(e.target.value)}
+                            />
+                          </div>
+                          <div className="col-sm-6 col-md-6 form-group">
+                            <label>Define</label>
+                            <textarea
+                              type="text"
+                              placeholder="Type your message..."
+                              className="form-control"
+                              value={define2}
+                              onChange={(e) => setDefine2(e.target.value)}
+                            />
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-sm mt-3">
+                            <label
+                              className="radio control-label"
+                              
+                            >
+                              Current Health Report
+                            </label>
+                            <div className="bottom-input-5 upload-icon-con">
+                              {uploadStatus === "Uploaded successfully" ? (
+                                <>
+                                  <div className="verified-icon">
+                                    <VscVerifiedFilled
+                                      className="check-icon"
+                                     
+                                    />
+                                  </div>
+                                  <span className="upload-txt">
+                                    Uploaded successfull
+                                  </span>
+                                </>
+                              ) : (
+                                <>
+                                  <label
+                                    htmlFor="currentHealthReport"
+                                    className="upload-icon-label"
+                                   
+                                  >
+                                    
+                                  </label>
+                                  <input
+                                    type="file"
+                                    accept=".pdf"
+                                    className="form-control visually-hidden"
+                                    id="currentHealthReport"
+                                    onChange={handleCurrentHealthReportChange}
+                                  />
+                                  <span  className="upload-txt">Upload Current Health report</span>
+                                  <BsUpload className="upload-icon-1"  />
+                                </>
+                              )}
+                            </div>
+                          </div>
+                          <div className="col-sm mt-3">
+                            <label
+                              className="radio control-label"
+                             
+                            >
+                              Past Health Report
+                            </label>
+                            <div className="bottom-input-5 upload-icon-con">
+                              {pastUploadStatus === "Uploaded successfully" ? (
+                                <>
+                                  <div className="verified-icon">
+                                    <VscVerifiedFilled
+                                      className="check-icon"
+                                      
+                                    />
+                                  </div>
+                                  <span className="upload-txt">
+                                    Uploaded successfull
+                                  </span>
+                                </>
+                              ) : (
+                                <>
+                                  <label 
+                                    htmlFor="pastHealthReport"
+                                    className="upload-icon-label"
+                                  >
+                                   
+                                  </label>
+                                  <input
+                                    type="file"
+                                    accept=".pdf"
+                                    className="form-control visually-hidden"
+                                    id="pastHealthReport"
+                                    onChange={handlePastHealthReportChange}
+                                  />
+                                  <span className="upload-txt">Upload Past Health report</span>
+                                  <BsUpload className="upload-icon-1" />
+                                </>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-sm-6 col-md-6 form-group ">
+                            <label
+                              className="mobile control-label"
+
+                            >
+                              Mobile Number
+                            </label>
+    
+                            <PhoneInput
+                              country={"us"}
+                              value={mobileNumber}
+                              onChange={(value, data, event, formattedValue) =>
+                                setMobileNumber(formattedValue)
+                              }
+                              inputStyle={{ width: "100%" }}
+                            />
+                          </div>
+                          <div className="col-sm-6 col-md-6">
+                            <label
+                              className="radio control-label"
+                             
+                             >
+                              HCR
+                            </label>
+                            <div className="form-check form-check-inline">
+                              <input
+                                className="form-check-input visually-hidden"
+                                type="radio"
+                                name="hcrOptions"
+                                id="hcrYes"
+                                value="yes"
+                                onChange={() => setHcr("yes")}
+                                checked={hcr === "yes"}
+                              />
+                              <label
+                                className="form-check-label tick-label white"
+                                htmlFor="hcrYes"
+                              >
+                                Yes
+                              </label>
+                            </div>
+                            <div className="form-check form-check-inline">
+                              <input
+                                className="form-check-input visually-hidden"
+                                type="radio"
+                                name="hcrOptions"
+                                id="hcrNo"                                                                            
+                                value="no"
+                                onChange={() => setHcr("no")}
+                                checked={hcr === "no"}
+                              />
+                              <label
+                                className="form-check-label tick-label white"
+                                htmlFor="hcrNo"
+                              >
+                                No
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div className="col-sm-12" >
+                          <button
+                            type="button"
+                            class="btn submit-button "
+                            onClick={handleSubmit}
+                          >
+                            Submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      );
+    };
+    <script>
+        import React, { useState ,useEffect} from "react";
+import "./StaffDetails.css";
+import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-phone-input-2/lib/style.css";
+import PhoneInput from "react-phone-input-2";
+import "react-datepicker/dist/react-datepicker.css";
+import { BsUpload } from "react-icons/bs";
+import { VscVerifiedFilled } from "react-icons/vsc";
+import { useNavigate,useLocation } from "react-router-dom";
+
+const StaffDetailsForm = () => {
+  const navigate = useNavigate();
+  const [profilePicture, setProfilePicture] = useState(null);
+  const [mobileNumber, setMobileNumber] = useState("");
+  const [healthReport, setHealthReport] = useState(null);
+  const [uploadStatus, setUploadStatus] = useState("");
+  const [pastHealthReport, setPastHealthReport] = useState(null);
+  const [pastUploadStatus, setPastUploadStatus] = useState("");
+  const [name, setName] = useState("");
+  const [idNumber, setIdNumber] = useState("");
+  const [address, setAddress] = useState("");
+  const [selectedGender, setSelectedGender] = useState(null);
+  const [state1, setState] = useState("");
+  const [NewPassword, setNewPassword] = useState("");
+  const [CurrentPassword, setCurrentPassword] = useState("");
+  const [pinNumber, setPinNumber] = useState(null);
+  const [className, setClassName] = useState(null);
+  const [age, setAge] = useState(null);
+  const [dob, setDob] = useState(new Date());
+  const [bloodGroup, setBloodGroup] = useState("");
+  const [selectedDepartment, setSelectedDepartment] = useState("");
+  const [selectedDesignation, setSelectedDesignation] = useState("");
+  const [allergies, setAllergies] = useState(null);
+  const [disease, setDisease] = useState(null);
+  const [define1, setDefine1] = useState(null);
+  const [define2, setDefine2] = useState(null);
+  const [hcr, setHcr] = useState(null);
+
+  const {state} = useLocation();
+  const {id} = state;
+  const staffInduvidualID = id;
+
+
+  const handleProfilePictureChange = (event) => {
+    if (event.target.files && event.target.files[0]) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setProfilePicture(e.target.result);
+      };
+      reader.readAsDataURL(event.target.files[0]);
+
+      // Reset the input field value
+      event.target.value = null;
+    }
+  };
+
+  const handleRemoveProfilePicture = () => {
+    // Reset the profile picture state
+    setProfilePicture(null);
+    // Reset the input field value
+    const inputField = document.getElementById("profilePicture");
+    if (inputField) {
+      inputField.value = null;
+    }
+  };
+
+ 
+
+  const handleInputChange = (e) => {
+    const numericValue = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+    const limitedValue = numericValue.slice(0, 10); // Limit to 10 digits
+    setIdNumber(limitedValue);
+  };
+
+  const handleBlur = (e) => {
+    const numericValue = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+    if (numericValue.length !== 10) {
+      setIdNumber(""); // Clear the input if not 10 digits
+    }
+  };
+
+  const handlePinInputChange = (e) => {
+    const numericValue = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+    const limitedValue = numericValue.slice(0, 6); // Limit to 10 digits
+    setPinNumber(limitedValue);
+  };
+
+  const handlePinBlur = (e) => {
+    const numericValue = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+    if (numericValue.length !== 6) {
+      setPinNumber(""); // Clear the input if not 10 digits
+    }
+  };
+  const handleAgeInputChange = (e) => {
+    const numericValue = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+    const limitedValue = numericValue.slice(0, 2); // Limit to 10 digits
+    setAge(limitedValue);
+  };
+
+  const handleAgeBlur = (e) => {
+    const numericValue = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+    if (numericValue.length !== 2) {
+      setAge(""); // Clear the input if not 10 digits
+    }
+  };
+
+  useEffect(()=>{
+    fetch(`http://localhost:5000/get_staffprofile_by_id?id_number=${staffInduvidualID}`)
+    .then(response=> response.json())
+   .then(data12=> {
+    console.log(data12);
+    if(data12.data != undefined && data12.data.length > 0)
+    {
+    /* setMobileNumber(data12.data[0].mobile_number);
+     setAge(data12.data[0].age);
+      */
+     setSelectedGender(data12.data[0].gender);
+     setBloodGroup(data12.data[0].blood_group);
+     setClassName(data12.data[0].class_and_division);
+     setDisease(data12.data[0].any_disease_define);
+     setAllergies(data12.data[0].allergies_define);
+     setAddress(data12.data[0].address);
+     setIdNumber(data12.data[0].id_number);
+    
+     setName(data12.data[0].name);
+     setHcr(data12.data[0].hcr);
+    }
+    
+   }).catch((error)=> console.log(error));},[])
+  const handleCurrentHealthReportChange = (event) => {
+    const allowedTypes = ["application/pdf"];
+
+    if (event.target.files && event.target.files[0]) {
+      const selectedFile = event.target.files[0];
+
+      if (allowedTypes.includes(selectedFile.type)) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          setHealthReport(e.target.result); // Update with file content
+          setUploadStatus("Uploaded successfully");
+        };
+        reader.onerror = (e) => {
+          console.error("errorFile:", e);
+        };
+        reader.readAsDataURL(selectedFile);
+      } else {
+        alert("Please upload a PDF document");
+        event.target.value = null;
+      }
+    }
+  };
+
+  const handlePastHealthReportChange = (event) => {
+    const allowedTypes = ["application/pdf"];
+
+    if (event.target.files && event.target.files[0]) {
+      const selectedFile = event.target.files[0];
+
+      if (allowedTypes.includes(selectedFile.type)) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          setPastHealthReport(e.target.result); // Update with file content
+          setPastUploadStatus("Uploaded successfully");
+        };
+        reader.onerror = (e) => {
+          console.error("errorFile:", e);
+        };
+        reader.readAsDataURL(selectedFile);
+      } else {
+        alert("Please upload a PDF document");
+        event.target.value = null;
+      }
+    }
+  };
+
+  console.log(mobileNumber);
+  const handleSubmit = async () => {
+    var currentdate = new Date();
+    let convetedDate =
+      currentdate.toISOString().split("T")[0] +
+      " " +
+      currentdate.toTimeString().split(" ")[0];
+
+    try {
+      // http://localhost:5000/staffdetails
+      const data = await axios.post("/staffdetails", {
+        name: name,
+        id_number: Number(idNumber),
+        address: address,
+        gender: selectedGender,
+        state: state,
+        pincode: Number(pinNumber),
+        classes: className,
+        age: Number(age),
+        dob: convetedDate,
+        blood_group: bloodGroup,
+        designation: "selectedDesignation",
+        department: "selectedDepartment",
+        allergies: allergies === "yes" ? 1 : 0,
+        allergies_define: define1,
+        any_disease: disease === "yes" ? 1 : 0,
+        any_disease_define: define2,
+        create_health_report: healthReport,
+        past_health_report: pastHealthReport,
+        mobile_number: 9936477,
+        hcr: hcr === "yes" ? 1 : 0,
+        updated_by: convetedDate,
+      });
+      if (data.status === 200) {
+        // API call was successful
+        console.log("API call successful!", data.data); // Log the response data
+      } else {
+        // API call failed
+        console.log("API call failed!");
+      }
+    } catch (error) {
+      // Error occurred while making the API call
+      console.error("Error:", error);
+      console.log("Error occurred while making the API call!");
+    }
+  };
+  console.log(profilePicture);
+
+  const handleBackButtonClick = () => {
+    navigate("/Main4"); 
+  };
+
+    </script>
+</body>
+</html>

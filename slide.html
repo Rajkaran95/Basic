@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide Scrollbar Example</title>
+<style>
+    /* Style for the slider */
+    #scrollbar {
+        width: 100%;
+    }
+
+    /* Style for the track */
+    #scrollbar input[type=range] {
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+
+<h2>Slide Scrollbar Example</h2>
+
+<div id="scrollbar">
+   
+    <input type="range" min="0" max="100" value="50" id="slider" />
+</div>
+<script>
+    var slider = document.getElementById("slider");
+    var displayValue = document.createElement("p");
+    displayValue.innerHTML = "Value: " + slider.value;
+    document.getElementById("scrollbar").appendChild(displayValue);
+    slider.oninput = function() {
+        displayValue.innerHTML = "Value: " + this.value;
+    };
+</script>
+
+</body>
+</html>
